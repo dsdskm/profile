@@ -1,7 +1,9 @@
 import { Table } from "react-bootstrap";
+import { getTimeLineList } from "../../sample";
 import ComNav from "../ComNav";
 
 const Profile = () => {
+  const timelineList = getTimeLineList();
   return (
     <>
       <ComNav>
@@ -16,23 +18,16 @@ const Profile = () => {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>1</td>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td colSpan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
+            {timelineList.map((data) => {
+              return (
+                <tr>
+                  <td>{data.year}</td>
+                  <td>{data.company}</td>
+                  <td>{data.project}</td>
+                  <td>{data.job}</td>
+                </tr>
+              );
+            })}
           </tbody>
         </Table>
       </ComNav>
