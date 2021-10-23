@@ -28,9 +28,13 @@ const ComNav = ({ children }) => {
                 <NavDropdown.Item href="#">Project2</NavDropdown.Item>
               </NavDropdown>
               <NavDropdown title="Study" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#">Study1</NavDropdown.Item>
+                <NavDropdown.Item href="/study?id=android">
+                  Android
+                </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#">Study2</NavDropdown.Item>
+                <NavDropdown.Item href="/study?id=kotlin">
+                  Kotlin
+                </NavDropdown.Item>
               </NavDropdown>
               <NavDropdown title="Tips" id="navbarScrollingDropdown">
                 <NavDropdown.Item href="#">Tips1</NavDropdown.Item>
